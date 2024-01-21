@@ -12,6 +12,6 @@ class SpindlerBattery(Serviceable):
     def needs_service(self):
         """Return True if the battery need service and False other waies"""
         diff = self.current_date - self.last_service_date
-        if diff > datetime.timedelta(days=365 * 2):
+        if diff > datetime.timedelta(days=365 * 3):
             return True
         return False
